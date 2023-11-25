@@ -17,12 +17,10 @@
     <div class="container my-3 d-flex flex-direction-row">
       {%for p in pd%}
       <div class="card container" style="width: 18rem;">
-        {% load static %}
-        <img src="{% static 'image1.png' %}" class="card-img-top" alt="...">
+        <img src="{{p.imag.url}}" class="card-img-top" alt="...">
         <div class="card-body text-center">
-          <h5 class="card-title">product: {{p.name}}</h5>
-          <p class="card-text"><b>price:{{p.age}}</b></p>
-          <a tabindex="0" class="btn btn-outline-info fw-bold mt-1 mb-1" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Title" data-bs-content="And here's some amazing content. It's very engaging. Right?">More</a>
+          <h5 class="card-title">{{p.name}}</h5>
+          <p class="card-text"><b>Rs. {{p.age}}</b></p>
           <a href="/home/products/{{p.id}}" class="btn btn-outline-info fw-bold mt-1 mb-1">Details</a>
         </div>
       </div>

@@ -6,7 +6,7 @@ class pt(models.Model):
     name=models.CharField(max_length=40)
     age=models.IntegerField()
     imag=models.ImageField(upload_to="ForHome",default="")
-    description=models.CharField(max_length=100,default="this is the detail information about the product you choosed")
+    description=models.CharField(max_length=800,default="this is the detail information about the product you choosed")
     
     def __str__(self):
         return self.name
